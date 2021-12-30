@@ -8,8 +8,13 @@ export const MyLabel = ({
 	color = 'primary',
 	label = 'No Label',
 	size = 'normal',
+	fontColor = '',
 }: MyLabelProps) => {
-	return <span className={`${size} text-${color}`}>{allCaps ? label.toUpperCase() : label}</span>;
+	return (
+		<span className={`label ${size} text-${color}`} style={{ color: fontColor }}>
+			{allCaps ? label.toUpperCase() : label}
+		</span>
+	);
 };
 
 interface MyLabelProps {
@@ -29,4 +34,8 @@ interface MyLabelProps {
 	 * Capitilize label when is true
 	 */
 	allCaps?: boolean;
+	/**
+	 * Customize font color
+	 */
+	fontColor?: string;
 }
