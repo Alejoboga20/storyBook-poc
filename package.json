@@ -73,6 +73,15 @@
 		"copyfiles": "^2.4.1",
 		"css-loader": "^6.5.1",
 		"postcss": "^8.4.5",
-		"rimraf": "^3.0.2"
-	}
+		"rimraf": "^3.0.2",
+		"semantic-release": "^18.0.1"
+	},
+	"plugins": [
+		"@semantic-release/commit-analyzer",
+		"@semantic-release/release-notes-generator",
+		"@semantic-release/changelog",
+		"@semantic-release/github",
+		"@semantic-release/npm",
+		"@semantic-release/git"
+	]
 }
