@@ -44,3 +44,5 @@ export interface MyLabelProps {
 	 */
 	backgroundColor?: string;
 }
+
+export default MyLabel;
