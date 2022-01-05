@@ -34,8 +34,10 @@
 	},
 	"scripts": {
 		"start": "start-storybook -p 6006",
-		"build": "TODO: Implement build script",
-		"chromatic": "npx chromatic --project-token=70a4480bc2ab"
+		"build": "yarn clean && tsc && yarn copy-files",
+		"chromatic": "npx chromatic --project-token=70a4480bc2ab",
+		"clean": "rimraf dist/",
+		"copy-files": "copyfiles -u 1 src/**/*.css dist/"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -64,7 +66,9 @@
 		"@storybook/react": "^6.4.9",
 		"babel-loader": "^8.2.3",
 		"chromatic": "^6.3.3",
+		"copyfiles": "^2.4.1",
 		"css-loader": "^6.5.1",
-		"postcss": "^8.4.5"
+		"postcss": "^8.4.5",
+		"rimraf": "^3.0.2"
 	}
 }
