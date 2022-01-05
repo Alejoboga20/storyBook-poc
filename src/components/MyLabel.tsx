@@ -18,7 +18,7 @@ export const MyLabel = ({
 	);
 };
 
-interface MyLabelProps {
+export interface MyLabelProps {
 	/**
 	 * This is the content displayed in MyLabel
 	 */
